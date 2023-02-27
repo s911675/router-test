@@ -1,0 +1,18 @@
+@import "./base.css";
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 0 auto
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background: #ef9a9a;
+    border: 1px solid black;
+    flex-grow: 1;
+    cursor: pointer;
+}
