@@ -4,15 +4,12 @@ import {find} from "lodash"
 import {useRouter} from 'vue-router';
 import { ref } from 'vue';
 
-export const useMenuStore = defineStore("menuStore", {
+export const useMenuStore = defineStore("menuStore", () => {
     const menus = ref([]);
     const router = useRouter();
     const routes = router.getRoutes();
     async function fetchMenus() {
         let serverMenus = (await axios.get("http://localhost:3000/menus")).data;
-
-
-        const routes = router.getRoutes();
 
         const menus = [];
         for (const menu of serverMenus) {
