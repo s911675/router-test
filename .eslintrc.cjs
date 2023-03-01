@@ -19,5 +19,7 @@ module.exports = {
     ],
     rules: {
         "vue/require-default-prop": "off",
+        "no-debugger": "false",
+
     },
 };

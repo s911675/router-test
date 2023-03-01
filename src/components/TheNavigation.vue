@@ -1,21 +1,21 @@
 <script setup>
-import { useRouter } from 'vue-router'
-import { useMenuStore } from '@/store/menuStore.js'
+import {useRouter} from 'vue-router'
+import {useMenuStore} from '@/store/menuStore.js'
 
 const router = useRouter()
 
 defineProps({
-    msg: { type: String, default: null },
+  msg: {type: String, default: null},
 })
 
 const menuStore = useMenuStore()
 menuStore.fetchMenus()
 
 const handleRouterLink = (route) => {
-    router.push({
-        name: route.name,
-        params: { id: '1' },
-    })
+  router.push({
+    name: route.name,
+    params: {id: '1'},
+  })
 }
 
 // console.log(import.meta.env.MODE)
@@ -23,23 +23,23 @@ const handleRouterLink = (route) => {
 </script>
 
 <template>
-    <div id='nav'>
-        <div
-            v-for='(menu, index) in menuStore.menus'
-            :key='index'
-            class='item'
-            @click='handleRouterLink'
-        >
-            {{
-                menu.name
-            }}
-        </div>
+  <div id='nav'>
+    <div
+        v-for='(menu, index) in menuStore.menus'
+        :key='index'
+        class='item'
+        @click='handleRouterLink'
+    >
+      {{
+        menu.name
+      }}
     </div>
+  </div>
 </template>
 
 <style scoped>
 #nav .router-active-link {
-    color: red;
-    border-bottom: 2px solid pink;
+  color: red;
+  border-bottom: 2px solid pink;
 }
 </style>
