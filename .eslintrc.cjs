@@ -18,8 +18,7 @@ module.exports = {
         'vue',
     ],
     rules: {
-        "vue/require-default-prop": "off",
-        "no-debugger": "false",
-
+        'vue/require-default-prop': 'off',
+        'no-debugger': 'off',
     },
-};
+}
