@@ -20,6 +20,8 @@ const carUrl = new URL('./assets/car.png', import.meta.url).href;
 
 const autoImportsModules = import.meta.glob('./autoImports/*.js', {eager: true})
 console.log(autoImportsModules);
+
+console.log(import.meta.env)
 </script>
 
 <template>

@@ -27,5 +27,9 @@ export default defineConfig({
                 },
             },
         },
+        assetsInlineLimit: 4096, // 0 : off
+        cssCodeSplit: true,
+        sourcemap: false, // true, inline, hidden
+
     },
 })
