@@ -11,7 +11,15 @@ const counterStore = useCounterStore();
 
 const publicCar = 'publicCar.png'
 const carUrl = new URL('./assets/car.png', import.meta.url).href;
+//
+// const autoImportsModules = import.meta.glob('@/autoImports/*.js')
+// console.log(autoImportsModules)
+// for (const path in autoImportsModules) {
+//   autoImportsModules[path]();
+// }
 
+const autoImportsModules = import.meta.glob('./autoImports/*.js', {eager: true})
+console.log(autoImportsModules);
 </script>
 
 <template>
