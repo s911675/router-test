@@ -2,8 +2,16 @@
 import TheNavigation from '@/components/TheNavigation.vue'
 import SwiperTest from '@/components/SwiperTest.vue'
 import {useCounterStore} from '@/store/counterStore.js'
+import car from '@/assets/car.png'
+import {menus} from '@/db.json'
+
+console.log(menus);
 
 const counterStore = useCounterStore();
+
+const publicCar = 'publicCar.png'
+const carUrl = new URL('./assets/car.png', import.meta.url).href;
+
 </script>
 
 <template>
@@ -36,4 +44,19 @@ const counterStore = useCounterStore();
       {{ counterStore.authUser.getPost(2) }}
     </div>
   </div>
+  <div>
+    <img src="@/assets/car.png" alt=""><br>
+    <img :src="car" alt=""><br>
+    <img :src="publicCar" alt=""><br>
+    <img :src="carUrl" alt=""><br>
+  </div>
+  <div>
+    {{ menus }}
+  </div>
 </template>
+
+<style scoped>
+img {
+  width: 200px;
+}
+</style>
