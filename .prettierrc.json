@@ -3,5 +3,7 @@
   "tabWidth": 4,
   "semi": true,
   "singleQuote": true,
-  "bracketSpacing": true
+  "bracketSpacing": true,
+  "no-bracket-spacing": false,
+  "bracket-same-line": false
 }
